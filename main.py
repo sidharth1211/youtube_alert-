@@ -6,6 +6,9 @@ import os
 import requests
 import random
 import datetime
+import dotenv
+from dotenv import load_dotenv
+load_dotenv()
 def video_alert():
     telegram_chatID= os.environ['chatID']
     telegram_token = os.environ['API_TOKEN']
