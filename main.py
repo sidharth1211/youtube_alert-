@@ -9,11 +9,11 @@ import dotenv
 from dotenv import load_dotenv
 load_dotenv()
 def video_alert():
-    telegram_chatID= os.environ['chatID']
-    telegram_token = os.environ['API_TOKEN']
+    telegram_chatID= os.getenv('chatID')
+    telegram_token = os.getenv('API_TOKEN')
     telegram_baseurl = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
     print(telegram_chatID)
-    URL = f"https://www.googleapis.com/youtube/v3/search?part=snippet&key={os.environ['youtubeAPI']}"
+    URL = f"https://www.googleapis.com/youtube/v3/search?part=snippet&key={os.getenv('youtubeAPI')}"
     param = {
 
         "type": "video",
